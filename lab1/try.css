@@ -1,0 +1,19 @@
+div{
+    margin:5px;
+    display: block;
+}
+#red-block{
+    background-color:red;
+    border: 5px solid black;
+    height:100px;
+    width:100px;
+    padding:10px;
+}
+
+#green-block{
+    background-color:green;
+    border: 5px solid black;
+    height: 100px;
+    width: 100px;
+    padding:10px;
+}
