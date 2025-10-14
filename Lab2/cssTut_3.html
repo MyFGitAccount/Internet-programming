@@ -1,0 +1,34 @@
+<html>
+    <head>
+    <title>CSS inheritance demo - My shopping list </title>
+    <style type ="text/css">
+    a.nodec {text-decoration: none}
+    a:hover {text-decoration: underline;
+        color: red;
+        background-color: #ccffcc }
+    li em { color:red;
+         font-weight: bold}
+    ul {margin-left: 75px}
+    ul ul { text-decoration: underline;
+     margin-left: 15px }
+     </style>
+     </head>
+     <body>
+        <h1>Shopping list for <em>Monday</em>:</h1>
+        <ul>
+        <li>Milk</li>
+        <li>Bread
+        <ul>
+        <li>White bread</li>
+        <li>Rye bread</li>
+        <li>Whole wheat bread</li>
+    </ul>
+    </li>
+                <li>Rice</li>
+                <li>Prostates</li>
+                <li>Pizza <em>with mushrooms</em></li>
+    </ul>
+        <p><a class = "nodec" href="http://www.food.com">
+        Go to the Grocery store</a></p>
+    </body>
+</html>

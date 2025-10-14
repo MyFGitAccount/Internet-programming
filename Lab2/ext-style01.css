@@ -1,0 +1,16 @@
+/* External Style Sheet */
+/* Used by CSS-Ex4.htm */
+a.nodec {text-decoration: none}
+a:hover {text-decoration: underline;
+    color: red;
+    background-color: #ccffcc 
+}
+li em { 
+    color:red;
+    font-weight: bold
+}
+ul {margin-left: 75px}
+ul ul { 
+    text-decoration: underline;
+     margin-left: 15px 
+    }

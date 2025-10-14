@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="base.js"></script>
+  </head>
+  <body>
+    <script>
+     const { ctx: ctx1 } = setCanvas(300, 200);
+     const { ctx: ctx2 } = setCanvas(300, 200);
+     const { ctx: ctx3 } = setCanvas(300,200);
+     const { ctx: ctx4 } = setCanvas(500,500);
+     const { ctx: ctx5 } = setCanvas(300,300);
+     // first canvas
+     line(ctx1, 20, 20, 100, 100, "red");
+     drawEq(ctx1, "v = s / t", 20, 50, 50);
+
+     drawEqWithSubscript(ctx2, "v", "a", 50, 50);
+     drawEq(ctx2, "=", 20, 70, 50);
+     drawFraction(ctx2, "s", "t", 100, 40, 20);
+
+     drawEq(ctx3, "E = mc", 24, 50, 50);
+     drawEqWithSuperscript(ctx3, "2", "", 160, 50, 16); // squared
+     drawFraction(ctx3, "a+b", "c+d", 250, 150, 24);
+     line(ctx3, 20, 200, 480, 200, "blue");
+
+     drawEq(ctx4, "E = mc", 24, 50, 50);
+     drawEqWithSuperscript(ctx4, "2", "", 150, 50, 16);
+     drawFraction(ctx4, "a+b", "c+d", 300, 100, 24);
+     drawRoot(ctx4, "x²+1", 50, 200, 24);
+     drawRoot(ctx4, "y+1+2+3+4+5", 200, 200, 24, 3);
+     drawMatrix(ctx4, [[1,2,3,4],[4,5,6,7],[7,8,9,10]], 350, 200, 30, 20);
+      
+     RectStroke(ctx5,10,10,0,0,color="red");
+     RectFill(ctx5,10,10,200,200,color="red");
+     dotLine(ctx5,size=1,x1=20,y1=20,x2=30,y2=30)
+
+    </script>
+  </body>
+</html>

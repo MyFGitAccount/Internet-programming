@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Physics Formulas</title>
+  <link href="base.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Formulas Topic</h2>
+    <ul>
+      <li class="active">Straight Line Motion</li>
+      <li>Constant Acceleration</li>
+      <li>Distance Function</li>
+      <li>Uniform Circular Motion</li>
+      <li>Centripetal Force</li>
+      <li>Constant Acceleration Circular Motion</li>
+      <li>Acceleration</li>
+      <li>Free Falling From Height h</li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h1>Straight Line Motion</h1>
+    <div class="formula">
+      <p><b>Definitions:</b></p>
+      <p><i>s</i>: distance (m), <i>t</i>: time (s), <i>v</i>: velocity (m/s), <i>v<sub>a</sub></i>: average velocity</p>
+      <p><b>Formula:</b> v =
+        <span class="division">
+          <span class="dividend">s</span>
+          <span class="divisor">t</span>
+        </span>
+      </p>
+    </div>
+
+    <canvas id="diagram" width="500" height="150"></canvas>
+
+    <div class="formula">
+      <p><b>Average velocity over multiple intervals:</b></p>
+      <p>v<sub>a</sub> = 
+        <span class="division">
+          <span class="dividend">(s₁ + s₂ + … + sₙ)</span>
+          <span class="divisor"> (t₁ + t₂ + … + tₙ)</span>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("diagram");
+    const ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.moveTo(20, 100);
+    ctx.lineTo(480, 100);
+    ctx.strokeStyle = "#000";
+    ctx.stroke();
+
+    const points = ["A₁","A₂","A₃","A₄","A₅"];
+    for (let i = 0; i < points.length; i++) {
+      let x = 60 + i * 80;
+      ctx.beginPath();
+      ctx.arc(x, 100, 5, 0, Math.PI * 2);
+      ctx.fillStyle = "red";
+      ctx.fill();
+      ctx.fillStyle = "black";
+      ctx.fillText(points[i], x - 8, 90);
+    }
+  </script>
+</body>
+</html>

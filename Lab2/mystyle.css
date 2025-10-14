@@ -1,0 +1,17 @@
+body p{
+    color:navy;
+    font-family: Arial, Verdana;
+}
+h1,h2{
+    text-align: center;
+}
+h3{
+    font-weight: bold;
+}
+li{
+    color:maroon;
+    font-style: italic;
+    padding-left: 3px;
+    font-weight: bold;
+    text-indent: 30px;
+}
