@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<!-- CSS additional example 1 -->
+		<style type="text/css">
+		em 			{color:red;}
+		p>em 		{color:blue}
+		p span em 	{color:orange} 
+		
+		p * em {color:pink}
+		</style>
+	</head>
+	<body>
+		<h1>Contextual selectors are <em>very</em> selective.</h1>
+		<p>This example shows how to target a <em>specific</em> tag
+			using the document hierarchy.</p>
+		<p>Tags only need to be descendts <span> in the <em>order stated</em> in the
+			selector</span>; other tags can be in between
+			and the selector still works.</p>
+		</p>
+	</body>
+</html>

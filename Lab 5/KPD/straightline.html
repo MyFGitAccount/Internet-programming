@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="base.js"></script>
+    </head>
+    <body>
+        <script>
+            window.onload = () => {
+            const { canvas, ctx } = setCanvas(600, 400);
+            setScreenSize(canvas, 600, 400);
+
+ 
+            drawEq(ctx, "Straight Line Motion", 24, 20, 40, "white");
+
+ 
+            drawEq(ctx, "s: distance (m)", 16, 20, 80,"white");
+            drawEq(ctx, "t: time (s)", 16, 20, 100,"white");
+            drawEq(ctx, "v: velocity (m/s)", 16, 20, 120,"white");
+            drawEqWithSubscript(ctx, "v", "a", 20, 140,"white");
+            drawEq(ctx, ": average velocity", 16, 40, 140,"white");
+
+ 
+            drawEq(ctx, "v =", 20, 20, 180,"white");
+            drawFraction(ctx, "s", "t", 60, 170, 20, "white");
+
+ 
+            drawEqWithSubscript(ctx, "v", "a", 20, 240);
+            drawEq(ctx, "=", 20, 40, 240);
+            drawFraction(
+            ctx,
+            "s₁ + s₂ + ... + sₙ",
+            "t₁ + t₂ + ... + tₙ",
+            130,
+            230,
+            20
+            );
+
+ 
+             const startX = 60;
+             const y = 300;
+             const spacing = 60;
+             const points = ["A₀", "A₁", "A₂", "A₃", "A₄"];
+
+             for (let i = 0; i < points.length; i++) {
+             CircleFill(ctx, 5, startX + i * spacing, y, "blue");
+             drawEq(ctx, points[i], 14, startX + i * spacing - 10, y + 25);
+             if (i > 0) {
+            Vector(ctx, 2,  startX + (i - 1) * spacing, y, startX + i * spacing, y, "black");
+            drawEqWithSubscript(ctx, "s", i, startX + (i - 1) * spacing + 15, y - 10, 14);
+            drawEqWithSubscript(ctx, "t", i, startX + (i - 1) * spacing + 27, y - 10, 14);
+            }
+        }
+        line(ctx,size=1,60,300,295,300,"red");
+        const startArcX=76;
+        const startArcY=300;
+        const ArcRadius=15;
+        const startAngle=0;
+        const endAngle=Math.PI;
+        for(let i=0;i<8;i++){
+            drawArc(ctx,startArcX+i*30,startArcY,ArcRadius,startAngle,endAngle);
+        }
+    };
+        </script>
+    </body>
+</html>

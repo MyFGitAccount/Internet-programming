@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Faux-Column Technique</title>
+	<script type="text/javascript">
+	  function resizeIframe(obj) {
+		obj.style.height = screen.height*3/4 + 'px';
+	  }
+	</script>
+	<style type=text/css>
+		body {
+			font: 1.0em verdana, arial, sans-serif;
+		}
+		* {	
+			margin:0px;
+			padding:0px;
+		}
+		div#header {
+			width:90%;
+			height:32px;
+			background-color:#CAF;
+			text-align:center;
+			font-size:1.1em;
+			padding-top:2px;
+			padding-bottom:8px;
+			color:gold;
+		}
+		
+		div#column2 {font-size:0.8em;}
+		
+		div#contentarea {
+			width:90%;
+			background-color:#FFF;
+			// border: 3px solid red;
+			background-image:url(bg/1095.jpg);
+			background-size: auto;
+			// border:3px solid red;
+		}
+		
+		div#nav {
+			padding: 0.5em 0 0 0;
+			border-top:4px solid gold;
+			border-bottom:3px solid gold;
+		}
+		
+		div#nav ul {
+			margin-left:20px;
+			margin-top:0;
+			margin-bottom:0.8em;
+			list-style-type:none;
+		}
+		
+		div#nav li {
+			margin-left:8px;
+			margin-bottom:0.5em;
+			font-weight:bold;
+			font-size:0.75em;
+		}
+			
+		div#nav li a:link {
+			text-decoration:none;
+			color:black;
+		}
+		
+		div#nav li a:hover {
+			background-color: yellow;
+		}
+		
+		div#nav li a:active {
+			color:orange;
+		}
+	
+		div#column1 {
+			width:15%;
+			background-color:#CCC;
+			float:left;
+		}
+		div#column2 {
+			width:70%;
+			background-color:#FFF;
+			float:left;
+		}
+		
+		div#column2 iframe {
+			width:100%;
+			// height:660px;
+		}
+		
+		div#column3 {
+			width:15%;
+			background-color:#DDD;
+			float:left;
+			border-top:4px solid gold;
+			border-bottom:3px solid gold;
+			text-align:center;
+			color:green;
+			font-size:0.8em;
+		}
+		#footer {
+			width:90%;
+			background-color:#FAC;
+			text-align:center;
+			font-size:1.1em;
+			padding:0.1em 0;
+		}
+		
+		.clearfloat {
+			clear:both;
+		}
+		.center {
+			margin-left:auto;
+			margin-right:auto;
+		}
+		
+		/*
+		The following is Aslett Clearing Method and
+		students may opetionally use it
+		*/
+		/*
+		.clearfix:after {
+			content: ".";
+			display:block;
+			height:0;
+			clear:both;
+			visibility:hidden;
+		}
+		
+		.clearfix {display: inline-table;}
+		
+		* html .clearfix {height:1%;}
+		.clearfix {display:block}
+		*/
+	</style>
+</head>
+<body>
+	<div id="header" class="center">
+		<h1>Welcome to HKU SPACE</h1>
+	</div>
+
+	<div id="contentarea" class="center">
+		<div id="column1">
+			<div id="nav">
+				<ul>
+					<li><a href="http://www.hkuspace.hku.hk" target="xspace">HKU SPACE (HOME)</a></li>
+					<li><a href="https://www2.hkuspace.hku.hk/cc/" target="xspace">HKU SPACE CC</a></li>
+					<li><a href="https://ic.hkuspace.hku.hk/" target="xspace">HKU SPACE IC</a></li>
+					<li><a href="https://hkuspace.hku.hk/chinese-medicine-clinics" target="xspace">HKU SPECE CMC</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="column2">
+			<iframe name="xspace" src="https://www2.hkuspace.hku.hk/cc/"
+			frameborder="0" scrolling="yes" onload="resizeIframe(this);">
+			</iframe>
+		</div>
+		<div id="column3">
+			<p>
+				Bridge to a brighter future<br/>
+				We offer the best choices for you!<br/>
+				Contact us immediately! Take action!
+			</p>
+		</div>
+		<div class="clearfloat">
+			<!-- purposely added to clear float -->
+		</div>
+	</div><!-- end of contentarea -->
+	<div id="footer" class="center">
+		Internet Programming 2020 - All rights reserved
+	</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="base.js"></script>
+        <style>
+            body{
+                background-color: #454545;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            window.onload=()=>{
+                width=600;
+                height=400;
+                const {canvas,ctx}=setCanvas(width,height);
+                drawEq(ctx,"Force and NewTon",24,20,20,color="black")
+                drawEq(ctx,"F = ma",20,20,50);
+                drawEq(ctx,"W = mg",20,20,70)
+            }
+        </script>
+    </body>
+</html>

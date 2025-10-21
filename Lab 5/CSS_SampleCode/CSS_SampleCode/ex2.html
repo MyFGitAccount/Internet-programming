@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<!-- CSS additional example 2 -->
+		<style type="text/css">
+		p {font-family: Helvetica, sans-serif;}
+		.specialtext {font-weight:bold;}
+		p.specialtext {color:red;}
+		// p.specialtext span {font-style:italic;}
+		.specialtext span {font-style:italic;}
+		// p.specialtext span, h1.specialtext span {font-style:italic}
+		</style>
+	</head>
+	<body>
+		<h1 class="specialtext">This is a heading with the <span>same class</span> as the 
+		second paragraph</h1>
+		<p>This tag has no class.</p>
+		<p class="specialtext">When a tag has a class attribute, we can target it
+			<span>regardless</span> of its position in the hierachy.
+		 </p>
+		 <div class=specialtext>
+			This is div, the span tag <span>may or may not</span> be styled
+		 </div>
+	</body>
+</html>

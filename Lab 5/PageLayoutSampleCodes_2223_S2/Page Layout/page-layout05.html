@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aslett Clearing Method</title>
+	<style type=text/css>
+		body {
+			margin:0px;
+			padding:0px;
+			font: 1.0em verdana, arial, sans-serif;
+		}
+		#header {
+			width:450px;
+			background-color:#CAF;
+		}
+		#contentarea {
+			width:450px;
+			background-color:#CCC;
+			border: solid;
+		}
+		#column1 {
+			width:150;
+			background-color:#FCC;
+			float:left;
+		}
+		#column2 {
+			width:150px;
+			background-color:#CFC;
+			float:left;
+		}
+		#column3 {
+			width:150px;
+			background-color:#AAF;
+			float:left;
+		}
+		#footer {
+			width:450px;
+			background-color:#FAC;
+		}
+		/*
+		.clearfloat {
+			clear:both;
+		}
+		*/
+		
+		/*The following is Aslett Clearing Method*/
+		
+		.clearfix:after {
+			content: ".";
+			display:block;
+			height:0;
+			clear:both;
+			visibility:hidden;
+		}
+		
+		.clearfix {display: inline-table;}
+		
+		* html .clearfix {height:1%;}
+		.clearfix {display:block}
+		
+	</style>
+</head>
+<body>
+	<div id="header">
+		This is the header
+	</div>
+	<div id="contentarea" class="clearfix">
+		<div id="column1">
+			The pineapple[2][3] (Ananas comosus) is a tropical plant with an edible fruit 
+			and the most economically significant plant in the family Bromeliaceae.[4] 
+			The pineapple is indigenous to South America, where it has been cultivated for many centuries.
+			The introduction of the pineapple to Europe in the 17th century made it a significant cultural icon of luxury. 
+			Since the 1820s,pineapple has been commercially grown in greenhouses and many tropical plantations.
+		</div>
+		<div id="column2">
+			Further, it is the third most important tropical fruit in world production. In the 20th century, 
+			Hawaii was a dominant producer of pineapples, especially for the US; however, by 2016, Costa Rica, Brazil, 
+			and the Philippines accounted for nearly one-third of the world's production of pineapples.[5]
+		</div>
+		<div id="column3">
+			Pineapples grow as a small shrub; the individual flowers of the unpollinated plant fuse to form a multiple fruit.
+			The plant is normally propagated from the offset produced at the top of the fruit,[2][6] or from a side shoot,
+			and typically mature within a year.[6][7]
+		</div>
+		<div class="clearfloat">
+			<!-- purposely added to clear float -->
+		</div>
+	</div><!-- end of contentarea -->
+	<div id="footer">
+		This is the footer
+	</div>
+</body>
+</html>

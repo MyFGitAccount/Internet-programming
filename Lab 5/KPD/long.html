@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="base.js"></script>
+    </head>
+    <body>
+        <script>
+            window.onload = () => {
+                const width=600;
+                const height=400;
+                const { canvas, ctx } = setCanvas(width, height);
+                setScreenSize(canvas, width, height);
+
+                // Title
+                drawEq(ctx, "Constant Acceleration Straight Line Motion", 24, 20, 20, "black");
+
+                // Definitions
+                drawEq(ctx, "a: acceleration", 16, 20, 80);
+                drawEq(ctx,"u:inital velocity",16,20,100);
+                drawEq(ctx, "v: velocity at time t", 16, 20, 120);
+
+                // Equation 1: a = (v - u) / t
+                drawEq(ctx, "a =", 20, 20, 160);
+                drawFraction(ctx, "v - u", "t", 80, 150, 20);
+                drawEq(ctx, "(m/s²)", 16, 120, 160);
+
+                // Equation 2: s = ut + 1/2at2
+                drawEq(ctx, "s =", 20, 20, 200);
+                drawEq(ctx,"u",20,50,200);
+                drawEq(ctx, "t +", 20, 63, 200);
+                drawFraction(ctx, "1", "2", 100, 190, 20);
+                drawEq(ctx, "a", 20, 115, 200);
+                drawEqWithSuperscript(ctx, "t", "2", 128, 200, 20);
+
+                // Equation 3: v2 - u2 = 2as
+                drawEqWithSuperscript(ctx, "v", "2", 20, 240, 20);
+                drawEq(ctx, " - ", 20, 37, 240);
+                drawEqWithSubscript(ctx, "u", "", 55, 240, 20);
+                drawEqWithSuperscript(ctx, "", "2", 67, 240, 20);
+                drawEq(ctx, " = 2as", 20, 80, 240);
+
+                drawEq(ctx,"v = u + at",20,20,280);
+
+            };
+
+        </script>
+    </body>
+</html>

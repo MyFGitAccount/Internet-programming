@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="base.js"></script>
+    </head>
+    <body>
+        <script>
+            window.onload=()=>{
+                const width=600;
+                const height=400;
+                const {canvas,ctx}=setCanvas(width,height);
+               
+                //Title:
+                drawEq(ctx,"Free Falling From Height H",24,20,20);
+
+                //Definitions
+                drawEq(ctx,"g: gravitional acceleration, v: velocity, s: distance after t, t: time",16,20,40);
+                drawEq(ctx,"a = g (g=9.81)",20,20,70);
+                drawEq(ctx,"v = u + gt",20,20,90);
+                drawEq(ctx,"s =",20,20,125);
+                drawFraction(ctx,"1","2",60,115,20);
+                drawEq(ctx,"g",20,75,125);
+                drawEqWithSuperscript(ctx,"t","2",85,125,20);
+                drawEq(ctx,"v =",20,20,165); //drawRoot(ctx, "x²+1", 50, 100, 24);       // √(x²+1)
+                drawRoot(ctx,"     ",45,165,20);
+                drawEq(ctx,"2gh",20,53,168);
+            }
+        </script>
+    </body>
+</html>
