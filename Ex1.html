@@ -1,0 +1,55 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Coin Tossing Simulation</h1>
+        <br>
+        <p>Enter your the n umber of tosses you want here</p>
+        <input type="text" id="toss-number" size="15" minlength="1" maxlength="15"></input>
+        <input name = "starttoss" type= "button" value="Toss">
+        <input name="restart" type="button" value="Restart"><br>
+        <p id="output"></p>
+        <script>
+            let headCount=0;
+            let tailCount=0; //100-. heads:49 , tails:51
+            let out=document.getElementById("output")
+            let input=document.getElementById('toss-number')
+            function flip(){
+                let flip=Math.random();
+                let head=0.5
+                let tail=0
+                let result;
+                if (flip>head){
+                    headCount++;
+                    return true
+                }else{
+                    tailCount++;
+                    return false;
+                }
+                
+            }
+        function TossCoin(){
+            if(parseInt(input.value)!=NaN && parseInt(input.value)>0){
+                let numberOfTimes=parseInt(input.value)
+                for(let i=0;i<input.value;i++){
+                    flip();
+                }
+                out.innerText=`heads: ${headCount} \n tails: ${tailCount}`
+            }
+            
+        }
+         function Reset(){
+            headCount=0;
+            tailCount=0;
+         }
+            document.getElementsByName('starttoss')[0].onclick=function (){
+               TossCoin()
+            }
+            document.getElementsByName('restart')[0].onclick=function (){
+              Reset()
+              out.innerText=`heads: ${headCount} \n tails: ${tailCount}`
+            }
+        </script>
+    </body>
+</html>
