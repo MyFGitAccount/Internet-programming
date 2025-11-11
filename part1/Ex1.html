@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <img id="ABCPic" />
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+    <button onclick="resume()">resume</button>
+    <script>
+      let ABCPic = document.getElementById("ABCPic");
+      let ABCPicArr = [];
+      let ABCPicPath = "";
+      let ABCPicIndex = 0;
+      let intervalId = null;
+    
+      // Fill array with uppercase letters A–J
+      for (let i = 0; i < 10; i++) {
+        let code = 65 + i; // ASCII 'A' = 65
+        let picPath = "img/" + String.fromCharCode(code) + ".png"; 
+        ABCPicArr.push(picPath);
+      }
+    
+      function changeImg() {
+        if (ABCPicIndex > 9) {
+          for(;ABCPicIndex!=0;ABCPicIndex--){
+             showMe()
+          }
+          
+        }
+        ABCPicPath = ABCPicArr[ABCPicIndex];
+        ABCPicIndex++;
+      }
+    
+      function showMe() {
+        changeImg();
+        ABCPic.setAttribute("src", ABCPicPath);
+        ABCPic.style.width = "100px";
+        ABCPic.style.height = "100px";
+      }
+    
+      function start() {
+        if (!intervalId) {
+          intervalId = setInterval(showMe, 500);
+        }
+      }
+    
+      function stop() {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+    
+      function resume() {
+        start();
+      }
+    </script>    
+  </body>
+</html>
